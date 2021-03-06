@@ -1,0 +1,1 @@
+from .async_ocrspace import AsyncOCRSpace

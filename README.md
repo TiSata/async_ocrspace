@@ -25,7 +25,8 @@ async def main():
     second_task = api.fetch_ocr_by_url(table_image_url, isTable='true', language='chs', OCREngine ='1')
     third_task = api.fetch_ocr_by_base64image(base64_image)
     results = await asyncio.gather(first_task, second_task, third_task) # returns a list of JSON responses
-    print(image) # 
+    print(results)
+    await api.close()
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())

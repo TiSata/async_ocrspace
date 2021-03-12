@@ -20,7 +20,7 @@ async def main():
     image_url = 'Image'
     table_image_url = 'Image of a table'
     base64_image = 'data:image/png;base64....'
-    api = AsyncOCRSpace(apiKey = 'helloworld', OCREngine ='2', scale='true')
+    api = AsyncOCRSpace(api_key='helloworld', OCREngine='2', scale='true')
     first_task = api.fetch_ocr_by_url(image_url)
     second_task = api.fetch_ocr_by_url(table_image_url, isTable='true', language='chs', OCREngine ='1')
     third_task = api.fetch_ocr_by_base64image(base64_image)

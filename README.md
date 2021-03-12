@@ -16,6 +16,7 @@ pip install async_ocrspace
 import asyncio
 from async_ocrspace import AsyncOCRSpace
 
+
 async def main():
     image_url = 'Image'
     table_image_url = 'Image of a table'
@@ -30,4 +31,5 @@ async def main():
 
 loop = asyncio.get_event_loop()
 loop.run_until_complete(main())
+
 ```
